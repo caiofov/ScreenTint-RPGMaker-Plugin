@@ -90,6 +90,12 @@ function ScreenTone(red, green, blue, gray, frames) {
     }
 }
 
+/**
+ * Parses the saved tone from plugin's parameters
+ * @param {string} tone_str Tone object as string
+ * @extends ScreenTone
+ * @type {{name:string}}
+ */
 function SavedTone(tone_str) {
     let obj = JSON.parse(tone_str)
     this.name = obj.Name
