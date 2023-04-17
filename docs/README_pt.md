@@ -4,6 +4,10 @@
 É uma maneira alternativa de alterar a tonalidade da tela.
 
 > Versão 1.0.0
+
+## Instalação
+Você deve baixar o aquivo `ScreenTint.js` e adicioná-lo à pasta de plugins do seu projeto. Após isso, adicione-o e ative-o no RPG Maker.
+
 ## Como usar
 Você pode fazer o uso de variáveis (seguindo a sintaxe do RPG Maker - `\v[<id_da_variável>]`) em todos argumentos dos comandos.
 
