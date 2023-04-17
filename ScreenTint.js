@@ -132,6 +132,10 @@ Game_Interpreter.prototype.pluginCommand = function (command, args) {
         let tone
         switch (args[0]) {
             case "tone":
+                if (args.length != 6) {
+                    throw RangeError(error_message(`Invalid number of arguments (expected 5) for command 'tint'.\n
+                    Current args: ${args.slice(1)}`))
+                }
                 tone = new ScreenTone(...args.slice(1))
                 break;
 
