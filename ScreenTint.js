@@ -87,6 +87,11 @@ function error_message(message) {
     return `[Screen Tint Plugin] - ${message}`
 }
 
+/**
+ * Converts a string to Number and checks if its value is between 0 and 255
+ * @param {string | Number} num 
+ * @returns {Number}
+ */
 function to_color_number(num) {
     let converted = Number(num)
     if (converted > 255 || converted < 0) {
