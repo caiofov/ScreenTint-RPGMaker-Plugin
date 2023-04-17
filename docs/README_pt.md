@@ -9,7 +9,9 @@ Você pode fazer o uso de variáveis (seguindo a sintaxe do RPG Maker - `\v[<id_
 
 ### Mudar tonalidade diretamente por comando:
 
-```tint tone <vermelho> <verde> <azul> <cinza> <quadros>```
+```
+tint tone <vermelho> <verde> <azul> <cinza> <quadros>
+```
 
 - `vermelho` (inteiro - entre -255 e 255): valor vermelho
 - `verde` (inteiro - entre -255 e 255): valor verde
@@ -22,6 +24,8 @@ Você pode fazer o uso de variáveis (seguindo a sintaxe do RPG Maker - `\v[<id_
 Você também pode salvar suas tonalidades no campo "Tonalidades Salvas" nos parâmetros do plugin.
 Para carregá-las, deverá usar o seguinte comando:
 
-```tint load <identificador da tonalidade salva>```
+```
+tint load <identificador da tonalidade salva>
+```
 
 - `identificador da tonalidade salva` (string): nome da tonalidade salva
