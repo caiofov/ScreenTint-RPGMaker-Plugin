@@ -222,6 +222,10 @@ function PluginParameters() {
 var PARAMS = new PluginParameters()
 const plugin = Game_Interpreter.prototype.pluginCommand;
 
+/**
+ * Displays a message on the console if 'show_logs' param is enable
+ * @param {string} message 
+ */
 function log(message) {
     if (PARAMS.show_logs) {
         console.log(log_message(message))
