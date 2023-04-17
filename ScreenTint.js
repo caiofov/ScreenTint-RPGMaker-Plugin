@@ -3,6 +3,9 @@
  * @author Caio Oliveira
  * 
  * @help
+ * # Version 1.0.0
+ * # Source: https://github.com/caiofov/ScreenTint-RPGMaker-Plugin
+ * 
  * You can use variables (following RPG Maker's syntax 
  * - '\v[<variable_id>]') in all command arguments.
  * 
@@ -42,8 +45,12 @@
 
 /** /*:pt
  * @plugindesc Maneira alternativa de alterar a tonalidade da tela.
- *
+ * @author Caio Oliveira
+ * 
  * @help
+ * # Versão 1.0.0
+ * # Referência: https://github.com/caiofov/ScreenTint-RPGMaker-Plugin
+ * 
  * Você pode fazer o uso de variáveis (seguindo a sintaxe do RPG Maker - 
  * '\v[<id_da_variável>]') em todos argumentos dos comandos.
  * 
