@@ -106,10 +106,10 @@ function to_color_number(num) {
  * @type {{red:Number,green:Number,blue:Number,gray:Number,frames:Number}}
  */
 function ScreenTone(red, green, blue, gray, frames) {
-    this.red = Number(red)
-    this.green = Number(green)
-    this.blue = Number(blue)
-    this.gray = Number(gray)
+    this.red = to_color_number(red)
+    this.green = to_color_number(green)
+    this.blue = to_color_number(blue)
+    this.gray = to_color_number(gray)
     this.frames = Number(frames)
 
     /**
