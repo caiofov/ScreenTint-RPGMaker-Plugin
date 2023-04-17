@@ -107,6 +107,7 @@
  * @desc Number of frames for the transition (1s -> 60 frames)
 **/
 
+
 /**
  * Converts a text to a error text pattern used on this plugin
  * @param {string} message text to convert to plugin's error pattern
@@ -221,12 +222,19 @@ function PluginParameters() {
 var PARAMS = new PluginParameters()
 const plugin = Game_Interpreter.prototype.pluginCommand;
 
+function log(message) {
+    if (PARAMS.show_logs) {
+        console.log(error_message(message))
+    }
+}
 
 Game_Interpreter.prototype.pluginCommand = function (command, args) {
     plugin.call(this, command, args);
 
     if (command === "tint") {
         let tone
+        log(`Command: '${args[0]}' | Args: ${args.slice(1)}`)
+
         switch (args[0]) {
             case "tone":
                 if (args.length != 6) {
@@ -246,6 +254,8 @@ Game_Interpreter.prototype.pluginCommand = function (command, args) {
             default:
                 throw TypeError(error_message(`Invalid command '${args[0]}'. Expected 'tone' or 'load'`))
         }
-        $gameScreen.startTint(tone.to_array(), tone.frames)
+        let values = tone.to_array()
+        log(`Start tint | Values: ${values} | Frames: ${tone.frames}`)
+        $gameScreen.startTint(values, tone.frames)
     }
 };
