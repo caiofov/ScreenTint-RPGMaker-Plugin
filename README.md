@@ -1,5 +1,5 @@
 # Screen Tint: A RPG Maker plugin
-> Clique [aqui](https://github.com/caiofov/ScreenTint-RPGMaker-Plugin/docs/README_pt.md) para ler em português
+> Clique [aqui](https://github.com/caiofov/ScreenTint-RPGMaker-Plugin/blob/main/docs/README_pt.md) para ler em português
 
 This is an alternative way of changing screen tone.
 
