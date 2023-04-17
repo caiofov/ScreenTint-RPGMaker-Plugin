@@ -133,8 +133,9 @@ Game_Interpreter.prototype.pluginCommand = function (command, args) {
                 break;
 
             case "load":
+                let name = args.slice(1).join(" ")
+                tone = PARAMS.get_saved_tone(name)
                 break;
-
             default:
                 break;
         }
