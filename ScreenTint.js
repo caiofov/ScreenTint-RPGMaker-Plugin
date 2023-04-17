@@ -96,3 +96,23 @@ function SavedTone(tone_str) {
     ScreenTone.prototype.constructor.call(this, obj.Red, obj.Green, obj.Blue, obj.Gray, obj.Frames)
 
 }
+
+function PluginParameters() {
+    let params = PluginManager.parameters('ScreenTint')
+    this.saved_tones = JSON.parse(params["Saved Tones"]).map(tone => { return new SavedTone(tone) })
+    this.show_logs = JSON.parse(params["Show logs"])
+
+
+    this.get_saved_tone = function (name) {
+        var tone_found = null
+        this.saved_tones.forEach(tone => {
+            console.log(tone.name.length, name.length)
+            if (tone.name === name) {
+                tone_found = tone
+                return
+            }
+        });
+
+        return tone_found
+    }
+}
