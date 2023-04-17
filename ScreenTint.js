@@ -77,3 +77,15 @@
  * @type number
  * @desc Number of frames for the transition (1s -> 60 frames)
 **/
+
+function ScreenTone(red, green, blue, gray, frames) {
+    this.red = Number(red)
+    this.blue = Number(blue)
+    this.green = Number(green)
+    this.gray = Number(gray)
+    this.frames = Number(frames)
+
+    this.to_array = function () {
+        return [this.red, this.green, this.blue, this.gray]
+    }
+}
