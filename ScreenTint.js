@@ -109,11 +109,11 @@
 
 
 /**
- * Converts a text to a error text pattern used on this plugin
+ * Converts a text to a log pattern used on this plugin
  * @param {string} message text to convert to plugin's error pattern
  * @returns error message
  */
-function error_message(message) {
+function log_message(message) {
     return `[Screen Tint Plugin] - ${message}`
 }
 
@@ -127,7 +127,7 @@ function error_message(message) {
 function to_color_number(num, min, max = 255) {
     let converted = Number(parse_text(num))
     if (converted > max || converted < min) {
-        throw RangeError(error_message(`Must be between ${min} and ${max}`))
+        throw RangeError(log_message(`Must be between ${min} and ${max}`))
     }
     return converted
 }
@@ -224,7 +224,7 @@ const plugin = Game_Interpreter.prototype.pluginCommand;
 
 function log(message) {
     if (PARAMS.show_logs) {
-        console.log(error_message(message))
+        console.log(log_message(message))
     }
 }
 
@@ -238,7 +238,7 @@ Game_Interpreter.prototype.pluginCommand = function (command, args) {
         switch (args[0]) {
             case "tone":
                 if (args.length != 6) {
-                    throw RangeError(error_message(`Invalid number of arguments (expected 5) for command 'tint'.\n
+                    throw RangeError(log_message(`Invalid number of arguments (expected 5) for command 'tint'.\n
                     Current args: ${args.slice(1)}`))
                 }
                 tone = new ScreenTone(...args.slice(1))
@@ -248,11 +248,11 @@ Game_Interpreter.prototype.pluginCommand = function (command, args) {
                 let name = args.slice(1).join(" ")
                 tone = PARAMS.get_saved_tone(name)
                 if (!tone) {
-                    throw RangeError(error_message(`Tone '${name}' can not be found.`))
+                    throw RangeError(log_message(`Tone '${name}' can not be found.`))
                 }
                 break;
             default:
-                throw TypeError(error_message(`Invalid command '${args[0]}'. Expected 'tone' or 'load'`))
+                throw TypeError(log_message(`Invalid command '${args[0]}'. Expected 'tone' or 'load'`))
         }
         let values = tone.to_array()
         log(`Start tint | Values: ${values} | Frames: ${tone.frames}`)
