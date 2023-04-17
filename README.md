@@ -5,7 +5,7 @@ This is an alternative way of changing screen tone.
 
 > Version 1.0.0
 ## Instalation
-You must download the file `ScreenTint.js` and move it to your project's plugin folder. After dad, add and enable it on RPG Maker.
+You must download the file `ScreenTint.js` and move it to your project's plugin folder. After that, add and enable it on RPG Maker.
 
 ## How to use
 You can use variables (following RPG Maker's syntax - `\v[<variable_id>]`) in all command arguments.
