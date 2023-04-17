@@ -147,7 +147,7 @@ Game_Interpreter.prototype.pluginCommand = function (command, args) {
                 }
                 break;
             default:
-                break;
+                throw TypeError(error_message(`Invalid command '${args[0]}'. Expected 'tone' or 'load'`))
         }
         $gameScreen.startTint(tone.to_array(), tone.frames)
     }
