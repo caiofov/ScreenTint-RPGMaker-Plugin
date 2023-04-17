@@ -7,9 +7,9 @@
  *
  * tint tone <red> <green> <blue> <gray> <frames>
  * 
- * - red (integer - between 0 and 255): red value
- * - green (integer - between 0 and 255): green value
- * - blue (integer - between 0 and 255): blue value
+ * - red (integer - between -255 and 255): red value
+ * - green (integer - between -255 and 255): green value
+ * - blue (integer - between -255 and 255): blue value
  * - gray (integer - between 0 and 255): gray value
  * - frames (integer): transition's duration (60 frames = 1 second)
  * 
@@ -44,9 +44,9 @@
  * 
  * tint tone <vermelho> <verde> <azul> <cinza> <quadros>
  * 
- * - vermelho (inteiro - entre 0 e 255): valor vermelho
- * - verde (inteiro - entre 0 e 255): valor verde
- * - azul (inteiro - entre 0 e 255): valor azul
+ * - vermelho (inteiro - entre -255 e 255): valor vermelho
+ * - verde (inteiro - entre -255 e 255): valor verde
+ * - azul (inteiro - entre -255 e 255): valor azul
  * - cinza (inteiro - entre 0 e 255): valor cinza
  * - quadros (inteiro): duração da transição (60 quadros = 1 segundo)
  * 
@@ -82,17 +82,17 @@
  * 
  * @param Red
  * @type number
- * @min 0
+ * @min -255
  * @max 255
  * 
  * @param Green
  * @type number
- * @min 0
+ * @min -255
  * @max 255
  * 
  * @param Blue
  * @type number
- * @min 0
+ * @min -255
  * @max 255
  * 
  * @param Gray
@@ -115,14 +115,16 @@ function error_message(message) {
 }
 
 /**
- * Converts a string to Number and checks if its value is between 0 and 255
- * @param {string | Number} num 
- * @returns {Number}
+ * Converts a string to Number and validates if it is between `min` and `max`
+ * @param {string | Number} num number to convert
+ * @param {Number} min number's min value
+ * @param {Number} max number's max value (default: 255)
+ * @returns {Number} converted and validated number
  */
-function to_color_number(num) {
+function to_color_number(num, min, max = 255) {
     let converted = Number(num)
-    if (converted > 255 || converted < 0) {
-        throw RangeError(error_message("Color number must be between 0 and 255"))
+    if (converted > max || converted < min) {
+        throw RangeError(error_message(`Must be between ${min} and ${max}`))
     }
     return converted
 }
@@ -138,10 +140,10 @@ function to_color_number(num) {
  * @type {{red:Number,green:Number,blue:Number,gray:Number,frames:Number}}
  */
 function ScreenTone(red, green, blue, gray, frames) {
-    this.red = to_color_number(red)
-    this.green = to_color_number(green)
-    this.blue = to_color_number(blue)
-    this.gray = to_color_number(gray)
+    this.red = to_color_number(red, -255)
+    this.green = to_color_number(green, -255)
+    this.blue = to_color_number(blue, -255)
+    this.gray = to_color_number(gray, 0)
     this.frames = Number(frames)
 
     /**
