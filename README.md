@@ -6,11 +6,13 @@ This is an alternative way of changing screen tone.
 > Version 1.0.0
 
 ## How to use
-You can use variables (following RPG Maker's syntax - `'\v[<variable_id>]'`) in all command arguments.
+You can use variables (following RPG Maker's syntax - `\v[<variable_id>]`) in all command arguments.
 
 ###  Change screen tone directly via command:
 
-```tint tone <red> <green> <blue> <gray> <frames>```
+```
+tint tone <red> <green> <blue> <gray> <frames>
+```
 
 - `red` (integer - between -255 and 255): red value
 - `green` (integer - between -255 and 255): green value
@@ -23,6 +25,8 @@ You can use variables (following RPG Maker's syntax - `'\v[<variable_id>]'`) in 
 You can also save tones in the 'Saved Tones' field on plugin's parameters. 
 To load them, you must use the following command:
 
-``` tint load <saved tone identifier> ```
+```
+tint load <saved tone identifier> 
+```
 
  - `saved tone identifier` (string): saved tone's name
