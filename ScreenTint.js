@@ -142,6 +142,9 @@ Game_Interpreter.prototype.pluginCommand = function (command, args) {
             case "load":
                 let name = args.slice(1).join(" ")
                 tone = PARAMS.get_saved_tone(name)
+                if (!tone) {
+                    throw RangeError(error_message(`Tone '${name}' can not be found.`))
+                }
                 break;
             default:
                 break;
