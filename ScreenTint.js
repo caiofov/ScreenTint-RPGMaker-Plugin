@@ -117,6 +117,9 @@ function PluginParameters() {
     }
 }
 
+function error_message(message) {
+    return `[Screen Tint Plugin] - ${message}`
+}
 
 var PARAMS = new PluginParameters()
 const plugin = Game_Interpreter.prototype.pluginCommand;
