@@ -33,3 +33,5 @@ tint load <identificador da tonalidade salva>
 ```
 
 - `identificador da tonalidade salva` (string): nome da tonalidade salva
+
+**Atenção**: O comando diferencia letras maiúsculas e minúsculas

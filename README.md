@@ -32,3 +32,5 @@ tint load <saved tone identifier>
 ```
 
  - `saved tone identifier` (string): saved tone's name
+
+**Warning**: It is case sensitive

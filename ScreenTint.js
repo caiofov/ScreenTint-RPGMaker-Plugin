@@ -21,12 +21,15 @@
  * 
  * 
  * > Load saved tone:
- * You can also save tones in the 'Saved Tones' field on the right side of this screen. 
+ * You can also save tones in the 'Saved Tones' field on the right 
+ * side of this screen. 
  * To load them, you must use the following command:
  * 
  * tint load <saved tone identifier>
  * 
  * - saved tone identifier (string): saved tone's name
+ * 
+ * Warning: It is case sensitive
  * 
  * @param Show logs
  * @type boolean
@@ -66,13 +69,15 @@
  * 
  * 
  * > Carregar uma tonalidade salva:
- * Você também pode salvar suas tonalidades no campo "Tonalidades Salvas" do lado direito desta tela.
+ * Você também pode salvar suas tonalidades no campo "Tonalidades Salvas" do 
+ * lado direito desta tela.
  * Para carregá-las, deverá usar o seguinte comando:
  * 
  * tint load <identificador da tonalidade salva>
  * 
  * - identificador da tonalidade salva (string): nome da tonalidade salva
  * 
+ * Atenção: O comando diferencia letras maiúsculas e minúsculas
  * @param Show logs
  * @text Mostrar logs
  * @type boolean
