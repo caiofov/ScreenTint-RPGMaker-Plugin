@@ -32,6 +32,7 @@
  * @param Saved Tones
  * @type struct<Tone>[]
  * @desc Saved tones for loading in the game
+ * @default ["{\"Name\":\"Normal\", \"Red\":\"0\",\"Green\":\"0\",\"Blue\":\"0\",\"Gray\":\"0\",\"Frames\":\"60\"}", "{\"Name\":\"Dark\", \"Red\":\"-68\",\"Green\":\"-68\",\"Blue\":\"-68\",\"Gray\":\"0\",\"Frames\":\"60\"}", "{\"Name\":\"Sepia\", \"Red\":\"34\",\"Green\":\"-34\",\"Blue\":\"-68\",\"Gray\":\"170\",\"Frames\":\"60\"}", "{\"Name\":\"Sunset\", \"Red\":\"68\",\"Green\":\"-34\",\"Blue\":\"-34\",\"Gray\":\"0\",\"Frames\":\"60\"}", "{\"Name\":\"Night\", \"Red\":\"-68\",\"Green\":\"-68\",\"Blue\":\"0\",\"Gray\":\"68\",\"Frames\":\"60\"}"]
  * 
  * 
  */
@@ -71,6 +72,7 @@
  * @text Tonalidade Salvas
  * @type struct<Tone>[]
  * @desc Salvar os tons para carregá-los mais facilmente
+ * @default ["{\"Name\":\"Normal\", \"Red\":\"0\",\"Green\":\"0\",\"Blue\":\"0\",\"Gray\":\"0\",\"Frames\":\"60\"}", "{\"Name\":\"Escuro\", \"Red\":\"-68\",\"Green\":\"-68\",\"Blue\":\"-68\",\"Gray\":\"0\",\"Frames\":\"60\"}", "{\"Name\":\"Sepia\", \"Red\":\"34\",\"Green\":\"-34\",\"Blue\":\"-68\",\"Gray\":\"170\",\"Frames\":\"60\"}", "{\"Name\":\"Por do sol\", \"Red\":\"68\",\"Green\":\"-34\",\"Blue\":\"-34\",\"Gray\":\"0\",\"Frames\":\"60\"}", "{\"Name\":\"Noite\", \"Red\":\"-68\",\"Green\":\"-68\",\"Blue\":\"0\",\"Gray\":\"68\",\"Frames\":\"60\"}"]
  * 
 **/
 
