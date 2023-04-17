@@ -22,6 +22,31 @@
  * 
  */
 
+/** /*:pt
+ * @plugindesc Maneira alternativa de alterar a tonalidade da tela.
+ *
+ * @help
+ * > Mudar tonalidade diretamente por comando:
+ * - tint tone <vermelho> <verde> <azul> <cinza> <quadros>
+ * 
+ * > Carregar uma tonalidade salva:
+ * - tint load <identificador da tonalidade salva>
+ * 
+ * @param Show logs
+ * @text Mostrar logs
+ * @type boolean
+ * @on Mostrar
+ * @off Não mostrar
+ * @default false
+ * @desc Mostrar ou não os logs do plugin (Visíveis quando pressiona F8 enquanto o jogo está executando). Útil para depuração.
+ * 
+ * @param Saved Tones
+ * @text Tonalidade salvas
+ * @type struct<Tone>[]
+ * @desc Salvar os tons para carregá-los mais facilmente
+ * 
+**/
+
 /** 
  /*~struct~Tone:
  * @param Name
