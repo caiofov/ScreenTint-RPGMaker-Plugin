@@ -4,10 +4,24 @@
  * 
  * @help
  * > Change screen tone directly via command:
- * - tint tone <red> <green> <blue> <gray> <frames>
+ *
+ * tint tone <red> <green> <blue> <gray> <frames>
+ * 
+ * - red (integer - between 0 and 255): red value
+ * - green (integer - between 0 and 255): green value
+ * - blue (integer - between 0 and 255): blue value
+ * - gray (integer - between 0 and 255): gray value
+ * - frames (integer): transition's duration (60 frames = 1 second)
+ * 
  * 
  * > Load saved tone:
- * - tint load <saved tone identifier>
+ * You can also save tones in the 'Saved Tones' field on the right side of this screen. 
+ * To load them, you must use the following command:
+ * 
+ * tint load <saved tone identifier>
+ * 
+ * - saved tone identifier (string): saved tone's name
+ * 
  * @param Show logs
  * @type boolean
  * @on Display
