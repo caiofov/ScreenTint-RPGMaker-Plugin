@@ -41,10 +41,23 @@
  *
  * @help
  * > Mudar tonalidade diretamente por comando:
- * - tint tone <vermelho> <verde> <azul> <cinza> <quadros>
+ * 
+ * tint tone <vermelho> <verde> <azul> <cinza> <quadros>
+ * 
+ * - vermelho (inteiro - entre 0 e 255): valor vermelho
+ * - verde (inteiro - entre 0 e 255): valor verde
+ * - azul (inteiro - entre 0 e 255): valor azul
+ * - cinza (inteiro - entre 0 e 255): valor cinza
+ * - quadros (inteiro): duração da transição (60 quadros = 1 segundo)
+ * 
  * 
  * > Carregar uma tonalidade salva:
- * - tint load <identificador da tonalidade salva>
+ * Você também pode salvar suas tonalidades no campo "Tonalidades Salvas" do lado direito desta tela.
+ * Para carregá-las, deverá usar o seguinte comando:
+ * 
+ * tint load <identificador da tonalidade salva>
+ * 
+ * - identificador da tonalidade salva (string): nome da tonalidade salva
  * 
  * @param Show logs
  * @text Mostrar logs
@@ -55,7 +68,7 @@
  * @desc Mostrar ou não os logs do plugin (Visíveis quando pressiona F8 enquanto o jogo está executando). Útil para depuração.
  * 
  * @param Saved Tones
- * @text Tonalidade salvas
+ * @text Tonalidade Salvas
  * @type struct<Tone>[]
  * @desc Salvar os tons para carregá-los mais facilmente
  * 
