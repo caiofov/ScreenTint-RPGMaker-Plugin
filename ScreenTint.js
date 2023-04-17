@@ -124,11 +124,28 @@ function error_message(message) {
  * @returns {Number} converted and validated number
  */
 function to_color_number(num, min, max = 255) {
-    let converted = Number(num)
+    let converted = Number(parse_text(num))
     if (converted > max || converted < min) {
         throw RangeError(error_message(`Must be between ${min} and ${max}`))
     }
     return converted
+}
+
+/**
+ * Identifies whether if the text is referencing to a variable and gets its value.
+ * @param {string} text 
+ * @returns {string | Number}
+ */
+function parse_text(text) {
+    let pattern = /\\v\[([0-9]+)\]/
+
+    let match = text.match(pattern)
+    if (match) {
+        return $gameVariables.value(Number(match[1]))
+    }
+    else {
+        return text
+    }
 }
 
 /**
@@ -146,7 +163,7 @@ function ScreenTone(red, green, blue, gray, frames) {
     this.green = to_color_number(green, -255)
     this.blue = to_color_number(blue, -255)
     this.gray = to_color_number(gray, 0)
-    this.frames = Number(frames)
+    this.frames = parse_text(frames)
 
     /**
      * @returns {number[]} Tint data as array
@@ -165,7 +182,7 @@ function ScreenTone(red, green, blue, gray, frames) {
  */
 function SavedTone(tone_str) {
     let obj = JSON.parse(tone_str)
-    this.name = obj.Name
+    this.name = parse_text(obj.Name)
     ScreenTone.prototype.constructor.call(this, obj.Red, obj.Green, obj.Blue, obj.Gray, obj.Frames)
 
 }
