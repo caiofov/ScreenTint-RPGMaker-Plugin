@@ -20,7 +20,7 @@ You can use variables (following RPG Maker's syntax - `'\v[<variable_id>]'`) in 
 
 
 ###  Load saved tone:
-You can also save tones in the 'Saved Tones' field on the right side of this screen. 
+You can also save tones in the 'Saved Tones' field on plugin's parameters. 
 To load them, you must use the following command:
 
 ``` tint load <saved tone identifier> ```
