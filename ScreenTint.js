@@ -97,12 +97,21 @@ function SavedTone(tone_str) {
 
 }
 
+/**
+ * Loads plugin's parameters
+ * @struct Parameters
+ * @type {{saved_tones:Array<SavedTone>, show_logs:boolean}}
+ */
 function PluginParameters() {
     let params = PluginManager.parameters('ScreenTint')
     this.saved_tones = JSON.parse(params["Saved Tones"]).map(tone => { return new SavedTone(tone) })
     this.show_logs = JSON.parse(params["Show logs"])
 
-
+    /**
+     * Returns the saved tone which has the given name
+     * @param {String} name name to search
+     * @return {?SavedTone} tone found
+    */
     this.get_saved_tone = function (name) {
         var tone_found = null
         this.saved_tones.forEach(tone => {
