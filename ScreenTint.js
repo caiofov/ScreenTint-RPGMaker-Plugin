@@ -116,3 +116,28 @@ function PluginParameters() {
         return tone_found
     }
 }
+
+
+var PARAMS = new PluginParameters()
+const plugin = Game_Interpreter.prototype.pluginCommand;
+
+
+Game_Interpreter.prototype.pluginCommand = function (command, args) {
+    plugin.call(this, command, args);
+
+    if (command === "tint") {
+        let tone
+        switch (args[0]) {
+            case "tone":
+                tone = new ScreenTone(...args.slice(1))
+                break;
+
+            case "load":
+                break;
+
+            default:
+                break;
+        }
+        $gameScreen.startTint(tone.to_array(), tone.frames)
+    }
+};
