@@ -3,6 +3,9 @@
  * @author Caio Oliveira
  * 
  * @help
+ * You can use variables (following RPG Maker's syntax 
+ * - '\v[<variable_id>]') in all command arguments.
+ * 
  * > Change screen tone directly via command:
  *
  * tint tone <red> <green> <blue> <gray> <frames>
@@ -41,6 +44,9 @@
  * @plugindesc Maneira alternativa de alterar a tonalidade da tela.
  *
  * @help
+ * Você pode fazer o uso de variáveis (seguindo a sintaxe do RPG Maker - 
+ * '\v[<id_da_variável>]') em todos argumentos dos comandos.
+ * 
  * > Mudar tonalidade diretamente por comando:
  * 
  * tint tone <vermelho> <verde> <azul> <cinza> <quadros>
