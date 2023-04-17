@@ -87,6 +87,13 @@ function error_message(message) {
     return `[Screen Tint Plugin] - ${message}`
 }
 
+function to_color_number(num) {
+    let converted = Number(num)
+    if (converted > 255 || converted < 0) {
+        throw RangeError(error_message("Color number must be between 0 and 255"))
+    }
+    return converted
+}
 
 /**
  * ScreenTone
