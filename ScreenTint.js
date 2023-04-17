@@ -89,3 +89,10 @@ function ScreenTone(red, green, blue, gray, frames) {
         return [this.red, this.green, this.blue, this.gray]
     }
 }
+
+function SavedTone(tone_str) {
+    let obj = JSON.parse(tone_str)
+    this.name = obj.Name
+    ScreenTone.prototype.constructor.call(this, obj.Red, obj.Green, obj.Blue, obj.Gray, obj.Frames)
+
+}
