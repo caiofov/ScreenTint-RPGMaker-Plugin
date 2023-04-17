@@ -78,15 +78,29 @@
  * @desc Number of frames for the transition (1s -> 60 frames)
 **/
 
+/**
+ * ScreenTone
+ * @param {string | Number} red 
+ * @param {string | Number} green 
+ * @param {string | Number} blue 
+ * @param {string | Number} gray 
+ * @param {string | Number} frames 
+ * 
+ * @type {{red:Number,green:Number,blue:Number,gray:Number,frames:Number}}
+ */
 function ScreenTone(red, green, blue, gray, frames) {
     this.red = Number(red)
-    this.blue = Number(blue)
     this.green = Number(green)
+    this.blue = Number(blue)
     this.gray = Number(gray)
     this.frames = Number(frames)
 
-    this.to_array = function () {
-        return [this.red, this.green, this.blue, this.gray]
+    /**
+     * @returns {number[]} Tint data as array
+     */
+    this.to_array = () => {
+        let a = [this.red, this.green, this.blue, this.gray]
+        return a
     }
 }
 
