@@ -79,6 +79,16 @@
 **/
 
 /**
+ * Converts a text to a error text pattern used on this plugin
+ * @param {string} message text to convert to plugin's error pattern
+ * @returns error message
+ */
+function error_message(message) {
+    return `[Screen Tint Plugin] - ${message}`
+}
+
+
+/**
  * ScreenTone
  * @param {string | Number} red 
  * @param {string | Number} green 
@@ -146,14 +156,7 @@ function PluginParameters() {
     }
 }
 
-/**
- * Converts a text to a error text pattern used on this plugin
- * @param {string} message text to convert to plugin's error pattern
- * @returns error message
- */
-function error_message(message) {
-    return `[Screen Tint Plugin] - ${message}`
-}
+
 
 var PARAMS = new PluginParameters()
 const plugin = Game_Interpreter.prototype.pluginCommand;
