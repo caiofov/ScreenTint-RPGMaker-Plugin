@@ -26,6 +26,19 @@ tint tone <vermelho> <verde> <azul> <cinza> <quadros>
 - `azul` (inteiro - entre -255 e 255): valor azul
 - `cinza` (inteiro - entre 0 e 255): valor cinza
 - `quadros` (inteiro): duração da transição (60 quadros = 1 segundo)
+
+**Example**
+
+Mudando para vermelho (255,0,0,0) em 60 quadros
+```
+tint tone 255 0 0 0 60
+```
+- Com variável:
+Ao especificar o valor da variável #1, é possível utilizar seu ID ao invés do valor da cor.
+
+```
+tint tone \v[1] 0 0 0 60
+``` 
  
  
 ### Carregar uma tonalidade salva:
