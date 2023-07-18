@@ -2,6 +2,10 @@
 > Click here to [read](https://github.com/caiofov/ScreenTint-RPGMaker-Plugin#readme) in English
 
 É uma maneira alternativa de alterar a tonalidade da tela.
+- [Instalação](uInstalação)
+- [Como usar](#como-usar)
+- [Comando `tone`](#mudar-tonalidade-diretamente-por-comando)
+- [Comando `load`](#carregar-uma-tonalidade-salva)
 
 > Versão 1.0.0
 
