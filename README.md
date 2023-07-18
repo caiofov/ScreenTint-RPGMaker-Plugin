@@ -27,6 +27,18 @@ tint tone <red> <green> <blue> <gray> <frames>
 - `gray` (integer - between 0 and 255): gray value
 - `frames` (integer): transition's duration (60 frames = 1 second)
 
+**Example**
+
+Turning into red (255,0,0,0) in 60 frames
+```
+tint tone 255 0 0 0 60
+```
+- With variable:
+Assigning the first value (255) to variable #1, it is possible to use its id instead of the color value
+
+```
+tint tone \v[1] 0 0 0 60
+``` 
 
 ###  Load saved tone:
 You can also save tones in the 'Saved Tones' field on plugin's parameters. 
