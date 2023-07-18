@@ -3,8 +3,13 @@
 
 This is an alternative way of changing screen tone.
 
+- [Installation](#installation)
+- [How to use](#how-to-use)
+- [Command `tone`](#change-screen-tone-directly-via-command)
+- [Command `load`](#load-saved-tone)
+
 > Version 1.0.0
-## Instalation
+## Installation
 You must download the file `ScreenTint.js` and move it to your project's plugin folder. After that, add and enable it on RPG Maker.
 
 ## How to use
@@ -22,6 +27,19 @@ tint tone <red> <green> <blue> <gray> <frames>
 - `gray` (integer - between 0 and 255): gray value
 - `frames` (integer): transition's duration (60 frames = 1 second)
 
+**Example**
+
+Turning into red (255,0,0,0) in 60 frames
+```
+tint tone 255 0 0 0 60
+```
+- With variable:
+Assigning the first value (255) to variable #1, it is possible to use its id instead of the color value
+
+```
+tint tone \v[1] 0 0 0 60
+``` 
+![Red](docs/imgs/red.gif)
 
 ###  Load saved tone:
 You can also save tones in the 'Saved Tones' field on plugin's parameters. 
@@ -34,3 +52,13 @@ tint load <saved tone identifier>
  - `saved tone identifier` (string): saved tone's name
 
 **Warning**: It is case sensitive
+
+**Example**
+
+Loading the following tone, which must be specified in plugin's parameters
+
+![Saved tone](docs/imgs/saved_tone.png)
+
+```
+tint load normal
+```

@@ -2,6 +2,10 @@
 > Click here to [read](https://github.com/caiofov/ScreenTint-RPGMaker-Plugin#readme) in English
 
 É uma maneira alternativa de alterar a tonalidade da tela.
+- [Instalação](uInstalação)
+- [Como usar](#como-usar)
+- [Comando `tone`](#mudar-tonalidade-diretamente-por-comando)
+- [Comando `load`](#carregar-uma-tonalidade-salva)
 
 > Versão 1.0.0
 
@@ -22,6 +26,20 @@ tint tone <vermelho> <verde> <azul> <cinza> <quadros>
 - `azul` (inteiro - entre -255 e 255): valor azul
 - `cinza` (inteiro - entre 0 e 255): valor cinza
 - `quadros` (inteiro): duração da transição (60 quadros = 1 segundo)
+
+**Example**
+
+Mudando para vermelho (255,0,0,0) em 60 quadros
+```
+tint tone 255 0 0 0 60
+```
+![Red](imgs/red.gif)
+- Com variável:
+Ao especificar o valor da variável #1, é possível utilizar seu ID ao invés do valor da cor.
+
+```
+tint tone \v[1] 0 0 0 60
+``` 
  
  
 ### Carregar uma tonalidade salva:
@@ -35,3 +53,13 @@ tint load <identificador da tonalidade salva>
 - `identificador da tonalidade salva` (string): nome da tonalidade salva
 
 **Atenção**: O comando diferencia letras maiúsculas e minúsculas
+
+**Exemplo**
+
+Carregando a tonalidade abaixo, que deve estar especificada nos parâmetros do plugin
+
+![Saved tone](imgs/saved_tone.png)
+
+```
+tint load normal
+```
