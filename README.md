@@ -51,3 +51,13 @@ tint load <saved tone identifier>
  - `saved tone identifier` (string): saved tone's name
 
 **Warning**: It is case sensitive
+
+**Example**
+
+Loading the following tone, which must be specified in plugin's parameters
+
+![Saved tone](docs/imgs/saved_tone.png)
+
+```
+tint load normal
+```
