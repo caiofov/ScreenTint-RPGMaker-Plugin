@@ -39,6 +39,7 @@ Assigning the first value (255) to variable #1, it is possible to use its id ins
 ```
 tint tone \v[1] 0 0 0 60
 ``` 
+![Red](docs/imgs/red.gif)
 
 ###  Load saved tone:
 You can also save tones in the 'Saved Tones' field on plugin's parameters. 

@@ -33,6 +33,7 @@ Mudando para vermelho (255,0,0,0) em 60 quadros
 ```
 tint tone 255 0 0 0 60
 ```
+![Red](imgs/red.gif)
 - Com variável:
 Ao especificar o valor da variável #1, é possível utilizar seu ID ao invés do valor da cor.
 
@@ -57,7 +58,7 @@ tint load <identificador da tonalidade salva>
 
 Carregando a tonalidade abaixo, que deve estar especificada nos parâmetros do plugin
 
-![Saved tone](docs/imgs/saved_tone.png)
+![Saved tone](imgs/saved_tone.png)
 
 ```
 tint load normal
