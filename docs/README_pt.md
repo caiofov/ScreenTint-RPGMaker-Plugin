@@ -52,3 +52,13 @@ tint load <identificador da tonalidade salva>
 - `identificador da tonalidade salva` (string): nome da tonalidade salva
 
 **Atenção**: O comando diferencia letras maiúsculas e minúsculas
+
+**Exemplo**
+
+Carregando a tonalidade abaixo, que deve estar especificada nos parâmetros do plugin
+
+![Saved tone](docs/imgs/saved_tone.png)
+
+```
+tint load normal
+```
