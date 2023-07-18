@@ -3,8 +3,13 @@
 
 This is an alternative way of changing screen tone.
 
+- [Installation](#installation)
+- [How to use](#how-to-use)
+- [Command `tone`](#change-screen-tone-directly-via-command)
+- [Command `load`](#load-saved-tone)
+
 > Version 1.0.0
-## Instalation
+## Installation
 You must download the file `ScreenTint.js` and move it to your project's plugin folder. After that, add and enable it on RPG Maker.
 
 ## How to use
